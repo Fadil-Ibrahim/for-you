@@ -1,0 +1,123 @@
+body {
+    background-color: #f0f0f0; /* Warna latar belakang lembut */
+    color: #333333; /* Warna teks gelap */
+    display: flex;
+    flex-direction: column; /* Mengatur elemen secara vertikal */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Merriweather', serif; /* Font serif untuk kenyamanan membaca */
+}
+
+header {
+    margin-bottom: 20px; /* Jarak antara header dan kartu */
+    text-align: center; /* Rata tengah */
+}
+
+h1 {
+    font-family: 'Merriweather', serif; /* Menggunakan font serif untuk tampilan elegan */
+    color: #333333; /* Warna teks gelap untuk kontras yang baik */
+    font-size: 1.8em; /* Ukuran font yang lebih besar untuk menonjol */
+    text-align: center; /* Rata tengah */
+    margin: 0; /* Menghapus margin default */
+    padding: 10px; /* Padding untuk ruang di dalam elemen */
+    background-color: #f9f9f9; /* Latar belakang putih lembut */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut untuk efek kedalaman */
+}
+
+.card-wrapper {
+    perspective: 1000px; /* Menambahkan perspektif untuk efek 3D */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Menambahkan lebar 100% agar kartu tidak terlalu lebar */
+    max-width: 300px; /* Maksimum lebar kartu yang lebih kecil */
+    margin: 0 auto; /* Untuk memastikan kartu terpusat */
+}
+
+.card {
+    width: 100%; /* Menyesuaikan lebar kartu dengan lebar wrapper */
+    min-height: 200px; /* Tinggi tetap untuk kartu */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan yang lembut */
+    background-color: #ffffff; /* Latar belakang putih */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.front, .back {
+    width: 100%;
+    min-height: 100%; /* Menyesuaikan tinggi dengan kartu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.message-content p {
+    font-size: 1em; /* Ukuran font yang nyaman dibaca */
+    color: #333333; /* Warna teks gelap */
+    margin: 10px 0;
+    line-height: 1.6; /* Jarak antar baris yang lebih baik */
+    text-align: justify; /* Rata kiri dan kanan untuk teks */
+}
+
+button {
+    background-color: #333333; /* Warna hitam */
+    color: #ffffff; /* Warna putih */
+    border: none;
+    padding: 8px 16px; /* Padding yang lebih kecil */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Ukuran font yang lebih kecil untuk tombol */
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #555555; /* Warna hitam yang lebih gelap */
+    transform: scale(1.05); /* Efek pembesaran saat hover */
+}
+
+a {
+    display: inline-block; /* Agar <a> tampil sebagai blok inline */
+    background-color: #1cb3ff; /* Warna latar belakang yang sama dengan tombol */
+    color: #ffffff; /* Warna teks putih */
+    text-decoration: none; /* Menghapus garis bawah default */
+    padding: 10px 20px; /* Padding yang sama dengan tombol */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 1em; /* Ukuran font yang sama dengan tombol */
+    margin-top: 20px; /* Jarak atas untuk pemisahan dari elemen lain */
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
+    text-align: center; /* Rata tengah untuk teks di dalam tombol */
+}
+
+a:hover {
+    background-color: #0d94dd; /* Warna latar belakang yang lebih gelap saat hover */
+    transform: scale(1.05); /* Efek pembesaran saat hover */
+}
